@@ -1,0 +1,447 @@
+html {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #0056b3, #00a9f4);
+    transition: background 0.5s ease-in-out;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    margin: 0;
+    padding: 0;
+    color: white;
+    background: linear-gradient(to bottom, #0056b3, #00a9f4);
+    transition: background 0.5s ease-in-out;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0056b3;
+    color: #fff;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: padding 0.3s ease-in-out, background 0.3s ease-in-out;
+}
+
+header.shrink {
+    padding: 0px 20px;
+    background-color: rgba(0, 86, 179, 0.8);
+    backdrop-filter: blur(10px);
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.header-left h1 {
+    transition: width 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.header-left .logo:hover,
+h1:hover {
+    transform: scale(1.1);
+    border-radius: 50%;
+    transition: width 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.header-left.shrink {
+    display: flex;
+    align-items: center;
+    font-size: small;
+    transition: width 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.logo {
+    width: 50px;
+    height: auto;
+    border-radius: 50%;
+    margin-right: 10px;
+    transition: width 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.logo.shrink {
+    width: 30px;
+    height: auto;
+    border-radius: 50%;
+    margin-right: 10px;
+    transition: width 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.nav-toggle .hamburger {
+    width: 100%;
+    height: 3px;
+    background: white;
+    border-radius: 5px;
+    transition: all 0.3s linear;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.2em;
+    padding: 10px 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 10px 20px;
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+}
+
+
+.header-right.shrink a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1em;
+    padding: 10px 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+}
+
+.header-right.shrink a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 10px 20px;
+    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+}
+
+.container {
+    flex: 1;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero {
+    position: relative;
+    text-align: center;
+    padding: 40px 20px;
+    color: white;
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.hero-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(8px);
+    transform: scale(1.1);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block;
+    width: 100%;
+}
+
+.hero-content h2 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    margin: 10px 0 0;
+}
+
+.hero-buttons {
+    margin-top: 20px;
+}
+
+.hero-buttons a {
+    margin: 0 10px;
+}
+
+.hero-buttons img {
+    width: auto;
+    height: 50px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.hero-buttons img:hover {
+    transform: scale(1.1);
+}
+.listen-now-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #00a9f4;
+    color: white;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 1.2em;
+    height: 50px;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.listen-now-button:hover {
+    background-color: #007bb3;
+    transform: scale(1.1);
+}
+
+.features,
+.download {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.feature-item,
+.download-item {
+    flex: 1 1 20%;
+    margin: 10px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+}
+
+.feature-item:hover,
+.download-item:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.feature-item h3,
+.download-item h3 {
+    color: #ffffff;
+}
+
+.feature-item p,
+.download-item p {
+    color: #f0f0f0;
+}
+
+.feature-item {
+    animation: fadeIn 2s ease-in-out;
+}
+
+.feature-image {
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+    border-radius: 10px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.download-item img {
+    width: auto;
+    height: 50px;
+    border-radius: 10px;
+    margin-right: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.download-item img:hover {
+    transform: scale(1.1);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes scaleUp {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes scaleDown {
+    from {
+        transform: scale(1.1);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
+}
+
+/* Video container */
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 2s;
+}
+
+#player {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100vh;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    border: none;
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(63, 94, 251, 0.2) 0%, rgba(252, 70, 107, 0.2) 100%);
+    backdrop-filter: blur(10px);
+    z-index: 0;
+}
+
+.header1 {
+    position: relative;
+    color: #fff;
+    padding: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s;
+    backdrop-filter: blur(10px);
+    /* Thêm blur */
+}
+
+.header-content {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    padding: 20px;
+    width: 100%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: white;
+    z-index: 1;
+}
+
+
+@media (max-width: 768px) {
+    .nav-toggle {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 86, 179, 0.9);
+        backdrop-filter: blur(50px);
+        position: absolute;
+        top: 0;
+        left: 0;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+        opacity: 0;
+        transform: translateX(100%);
+        transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    .nav-links.hide {
+        opacity: 0;
+        transform: translateX(100%);
+        transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    .nav-links li {
+        margin: 20px 0;
+        text-align: center;
+        transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    .nav-links.show {
+        display: flex;
+        opacity: 1;
+        transform: translateX(0);
+        transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    .feature-item,
+    .download-item {
+        flex: 1 1 40%;
+        flex-direction: column;
+    }
+
+    .nav-close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background: transparent;
+        border: none;
+        font-size: 2em;
+        color: white;
+        cursor: pointer;
+    }
+}
